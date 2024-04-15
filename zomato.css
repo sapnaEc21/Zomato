@@ -1,0 +1,491 @@
+*{
+    margin: 0px ;
+    padding:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.nav{
+    height: 80px;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.nav .logo{
+    margin-left: 160px;
+    margin-right: -65px;
+}
+.nav img{
+    height: 28px;width: 130px;
+    
+}
+.search{
+    height: 52px;
+    width: 690px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    color: rgb(79, 79, 79);
+    box-shadow: 0px 0px 3px gray;
+}
+.leftsearch{
+    height: 50px;
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.leftsearch img{
+    height: 20px;width: 20px;
+
+}
+#loc{
+ margin-left: 7px;
+ margin-right: 9px;
+}
+.leftsearch input{
+    width: 150px;
+    height: 30px;
+    /* position: relative; */
+    margin-left: -30px;
+    border: none;
+    outline: none ;
+}
+.separator{
+    margin-left: 9px;
+}
+.rightsearch{
+    /* width: 300px; */
+    display: flex;
+    /* justify-content: ; */
+    align-items: center;
+    margin-left: 15px;
+}
+.rightsearch .searchlogo img{
+    height: 26px;
+    width: 28px;
+    margin-right: 10px;
+}
+.rightsearch .inputt input{
+    height: 50px;
+    width: 260px;
+    border: none;
+    outline: none;
+}
+.login{
+    width: 160px;
+    margin-right: 160px;
+}
+.login ul{
+    display: flex ;
+    justify-content: space-around;
+    list-style: none;
+    
+}
+.login a{
+    text-decoration: none;
+    color: gray;
+    font-size: large;
+}
+.section1{
+    height: 25px;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+}
+.section1 .subsec1{
+    width: 190px;
+    margin-left: 215px;
+}
+.section1 .subsec1 p{
+    font-size: small;
+    
+}
+.section2{
+    height: 100px;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;  
+}
+.section2 .subsection{
+ width: 590px;
+ display: flex;
+ justify-content: space-around;
+ margin-left: 235px;
+}
+.section2 .subsection, a{
+    text-decoration: none;
+    color: grey;
+}
+.section2 .subsection .childsecdiv{
+    display: flex;
+    align-items: center;
+}
+.section2 .subsection .childsecdiv .ig{
+    height: 60px;
+    width: 60px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+.childsecdiv img{
+    height: 28px;
+}
+.section2 .subsection .childsecdiv h3{
+    margin-left: 10px;
+}
+.section3{
+    height: 80px;
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+}
+.section3 .subsec3{
+    width: 450px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 200px;
+}
+.childsec3{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.sec3i1{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 34px;
+    width: 90px;
+    box-shadow: 0px 0px 1px black;
+    border-radius: 9px;
+}
+.sec3i1 img{
+    height: 20px;
+}
+
+.section4{
+    height: 45vh;
+    background-color: rgb(245, 244, 244);
+}
+.section4 .para {
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.section4 .para p{
+    font-size:xx-large;
+    margin-left: 214px; 
+    margin-top: 80px;            
+}
+.sec4image{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    margin-left: 190px;
+    margin-right: 230px;
+}
+.sec4image img{
+    height: 150px;
+    
+}
+.sec4{
+    height: 80px;
+    width: 150px;
+}
+.sec4 img{
+    border-radius: 100%;
+}
+
+.sec4 .anchr {
+    display: flex;
+    justify-content: center;
+    margin-right: -5px;
+}
+.section5{
+    height: 45vh;
+}
+.section5 .heading{
+height: 50px;
+display: flex;
+align-items: center;
+margin-left: 215px;
+}
+.subsec5{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 180px;
+    margin-right: 180px;
+    margin-top: 20px;
+}
+.childsubsec5{
+    width: 120px;
+}
+.childsubsec5 h4,.childsubsec5 p{
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 8px;
+}
+.section5 .subsec5 .childsubsec5 .sec5img img{
+    height: 150px;
+    width: 150px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 7px black;
+}
+
+.section6{
+    height: 50px;
+    /* background-color: bisque; */
+    display: flex;
+    align-items: center;
+}
+.section6>h1{
+    margin-left: 215px;
+}
+.section7{
+    height: 210vh;
+    /* background-color: aqua; */
+    justify-content: space-around;
+    
+}
+.section7 .subsec71{
+    height: 69vh;
+    width:75vw;
+    /* background-color: aliceblue; */
+    margin-left: 214px;
+    margin-right: 210px;
+    display: grid;
+    grid-template-columns: 359px 359px 359px;
+    justify-content: space-between;
+}
+.section7 .subsec71 .subsec72 {
+    width: 350px;
+    height: 60vh;
+    display: grid;
+    justify-content: center;
+    border-radius: 5px;
+    /* background-color: black; */
+}
+.subsec72:hover{
+    border: 0px solid black;
+    box-shadow: 0px 0px 5px rgb(52, 51, 51);
+    background-color: rgb(255, 255, 255);
+}
+.section7 .subsec71 .subsec72 img{
+    height: 240px;
+    width: 310px;
+    margin-top: 37px;
+    border-radius: 10px;
+}
+.subsec721{
+    /* background-color: blue; */
+    margin-top: 0.4px;
+    height: 160px;
+    width: 310px;
+}
+.restaurantname{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom: 4px;
+}
+.restaurantname .rating{
+    height: 22px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    border-radius: 8px;
+}
+.restaurantname .rating h5{
+    color: white;
+}
+.restaurantdesc{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+.restaurantdesc p{
+    font-size: small;
+}
+.time{
+    display: flex;
+    justify-content: right;
+    font-size: small;
+    margin-top: 5px;
+}
+.line{
+    height: 0.1rem;
+    background-color: rgb(232, 232, 232);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.safety{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 26px;
+    font-size:x-small;
+}
+.safety #image{
+    height: 20px;
+    width: 50px;
+    border-radius: 0px;
+}
+.safety .img{
+    margin-top: -26px;
+} 
+.safety .para {
+    margin-left: 20px;
+}
+
+/* .section8line{
+    height: 0.1rem;
+    background-color:rgb(223, 219, 219);
+    margin-bottom: 20px;
+    margin-top: 20px;
+} */
+.section9{
+    height: 72vh;
+    background-color: rgb(252, 252, 252);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section9 .subsectioon9{
+    height: 60vh;
+    width: 60vw;
+    /* background-color: aliceblue; */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    
+}
+.section9 .subsectioon9>p{
+    margin: 0px 0px 2rem;
+    color: rgb(54, 54, 54);
+    font-size: 2rem;
+    line-height: 0rem;
+    font-weight: 500;
+}
+.section9 .subsectioon9 .subsectioon91{
+    background-color: white;
+    height: 65px;
+    width: 72vw;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 0px solid black;
+    box-shadow: 0px 0px 1px rgb(52, 51, 51);
+
+}
+.section9 .subsectioon9 .subsectioon91 p{
+    margin-left: 20px;
+    margin-right: 20px;
+    font-weight: 400;
+    color: rgb(28, 28, 28);
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.footer{
+    height: 75vh;
+    background-color:rgb(248, 248, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .section10{
+    height: 65vh;
+    width: 72vw;
+    background-color: rgb(248, 248, 248);
+}
+.footer .section10 .footerheading{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.footerheading img{
+    height: 29px;
+    width: 110px;
+}
+.footer .section10 .footerheading .dropdown{
+    display: flex;
+}
+.footer .section10 .footerheading .dropdown .dropdown1 #ind img{
+height: 15px;
+width: 15px;
+}
+.footer .section10 .footerheading .dropdown select{
+    height: 30px;
+    width: 90px;
+    margin-left: 20px;
+    border-radius: 5px;
+    font-size:medium;
+    color: rgb(79, 79, 79);
+
+}
+.footer .section10 .subsection102{
+   
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns:14.4vw 14.4vw 14.4vw 14.4vw 14.4vw ;
+    
+}
+
+.sociallinksimgcombine{
+    display: flex;
+    justify-content: space-between;
+    width: 165px;
+
+}
+.subsection102links h4{
+    margin-bottom: 20px;
+    letter-spacing: 0.2rem;
+    font-weight: 400;
+    margin: 0px 0px 1.2rem;
+    font-size: medium;
+}
+
+.sociallinksimgcombine .image img{
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+}
+.image1 img{
+height: 45px;
+width: 160px;
+margin-top: 19px;
+}
+.section10line{
+    height: 0.1rem;
+    background-color: rgb(232, 232, 232);
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+.laststmt{
+    color: rgb(79, 79, 79);
+    font-size: 0.8rem;
+    line-height: 1.0rem;
+    
+}

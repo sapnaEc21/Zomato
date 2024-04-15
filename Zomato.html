@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./zomato.css">
+</head>
+<body>
+    <div class="zomato">
+        <!-- NAV BAr -->
+        <div class="nav">
+            <div class="logo">
+                <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png" alt="">
+            </div>
+            <div class="search">
+                <div class="leftsearch">
+                    <img id="loc" src="https://cdn-icons-png.freepik.com/256/11042/11042326.png" alt="">
+                    <input type="text" placeholder="location">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAHlBMVEX///8AAABhYWFZWVleXl5bW1uZmZlWVlZSUlKHh4c7NRlEAAACq0lEQVR4nO3Za47jIBBFYc/E6XTvf8MjVEITx3kYTFGPPt8KfMUh/MiyAAAAAAAAAAAAAAAAAAAAAAAAYOPr9jez29eyfP/J7Luc4mr9FYpWCTXvxLXexYv1lyi5/P+5uVp/i4rr/S9qxlDXZSPfKV6XB9nu4uVxYLZQ1/3AXBOfDswU6pNEc018OTBLqC8SFRkejd0zkS3UN4nmOMUPJxj/Lr69gxlC/Zho9IkHB8YN9VCikSc2DIwZ6uFEo05sHBgv1KZERayn/8BDvxcp1OZEo51i1wkWUe5ixx2sYoTamWiciacGRgj1RKIxJp4e6D3Uk4kKz49G9zOx5TfUAYkKr6c46AQLn3dxyB2sPIY6LFGvEwcP9Bfq0EQ9TlQY6CvU4Yl6m6g00E+oKokKH0//wId+z0OoaokK+1AVE/UxUX2gdajKidpPnDLQMtQJidpOnDbQKtRJiQqLp1/1od+bH+rERMXsU5x8gsXcuzj1DlYzQ52e6OyJRgPnhWqS6MyJhgPnhGqWqNB/NAyeiS3tUE0TFbqnaH6CheZdNL6DlV6oDhIVWhPdDNQK1Umi4qYw8GY9amt8qI4SFaMnuhs4+i66uoPVyKffxUO/Ny5Uh4mKUafo9ASLMXfR5R2sRoTqNlFxfqLzgedDdZ2oODcxwMBzobpPVPQ/Go6fia3eUEMkKvpOMcwJFj13McgdrNpDDZSoaJ0YbmBrqMESFS0TQw5sCTVgouLooxHqmdg6FmrQRMWRUwx8gsXnuxj2DlafQg2dqHg/McHA9/9pOPtvotfruxj+DlavQk2RqHg+MdHA56GmSVTsn/7gD/3eY6ipEhXX3CdY3N/FZHewWjMnKtbsA2uoSRMVl+wDS6iJExU/1h8AAAAAAAAAAAAAAAAAAAAAAADw2/0D1Ro1Y8h9PUkAAAAASUVORK5CYII=" alt="">
+                </div>
+                <div class="separator">|</div>
+                <div class="rightsearch">
+                    <div class="searchlogo">
+                        <img src="data:image/jpeg;base64,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" alt="">
+                    </div>
+                    <div class="inputt">
+                        <input type="text" placeholder="Search for restaurant,cuisine or a dish">
+                    </div>
+                </div>
+            </div>
+            <div class="login">
+                <ul>
+                    <li><a href="">Log in</a></li>
+                    <li><a href="">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+    
+<!-- Section1 -->
+        <div class="section1">
+           <div class="subsec1">
+            <span><p>Home /  India  /  Bangalore</p></span>
+           </div>
+        </div>
+
+<!-- Section 2 -->
+        <div class="section2">
+            <div class="subsection">
+                <div class="childsec">
+                    <a href="">
+                        <div class="childsecdiv">
+                            <div class="ig"><img src="https://b.zmtcdn.com/data/o2_assets/78d25215ff4c1299578ed36eefd5f39d1616149985.png" alt=""></div>
+                            <h3>Dining Out</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="childsec">
+                    <a href="">
+                        <div class="childsecdiv">
+                            <div class="ig"><img src="https://b.zmtcdn.com/data/o2_assets/c0bb85d3a6347b2ec070a8db694588261616149578.png" alt=""></div>
+                            <h3>Delivery</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="childsec">
+                    <a href="">
+                        <div class="childsecdiv">
+                            <div class="ig"><img src="https://b.zmtcdn.com/data/o2_assets/01040767e4943c398e38e3592bb1ba8a1616150142.png" alt=""></div>
+                            <h3>Nightlife</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr>
+<!-- Section3 -->
+        <div class="section3">
+            <div class="subsec3">
+                <div class="childsec3">
+                    <div class="sec3i1">
+                        <img src="data:image/png;base64,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" alt="">
+                        <p>Filters</p>
+                    </div>    
+                </div>
+                <div class="childsec3">
+                    <div class="sec3i1">
+                        <p>Rating: 4.0+</p>
+                    </div>   
+                </div>
+                <div class="childsec3">
+                    <div class="sec3i1">
+                        <p>Pure Veg</p>
+                    </div> 
+                </div>
+                <div class="childsec3">
+                    <div class="sec3i1">
+                        <p>Cuisine</p>
+                    </div> 
+                </div>
+            </div>
+        </div>
+<!-- Section 4 -->
+        <div class="section4">
+            <div class="para"><p >Inspiration for your first order</p></div>
+            <div class="sec4image">
+                <div class="sec4">
+                   <div><img src="https://b.zmtcdn.com/data/dish_images/d19a31d42d5913ff129cafd7cec772f81639737697.png" alt=""></div> 
+                    <div class="anchr"><a href=""><p>Biryani</p></a> </div>   
+                </div>
+
+                <div class="sec4">
+                    <div ><img src="https://b.zmtcdn.com/data/o2_assets/8dc39742916ddc369ebeb91928391b931632716660.png" alt=""></div>
+                    <div class="anchr"><a href=""><p>Dosa</p></a></div>    
+                 </div>
+                 <div class="sec4">
+                    <div><img src="https://b.zmtcdn.com/data/dish_images/d9766dd91cd75416f4f65cf286ca84331634805483.png" alt=""></div> 
+                    <div class="anchr"><a href=""><p>Idli</p></a> </div>   
+                 </div>
+                 <div class="sec4">
+                    <div>
+                        <img src="https://b.zmtcdn.com/data/o2_assets/bf4bde7b78d517ac8460ea03d4c64a7f1632716550.png" alt="">
+                    </div>
+                    <div class="anchr"><a href=""><p>Vada</p></a></div>    
+                 </div>
+                 <div class="sec4">
+                    <div><img src="https://b.zmtcdn.com/data/o2_assets/fc641efbb73b10484257f295ef0b9b981634401116.png" alt=""></div> 
+                     <div class="anchr"><a href=""><p>Sandwich</p></a> </div>   
+                 </div>
+                 <div class="sec4">
+                    <div><img src="https://b.zmtcdn.com/data/dish_photos/bf0/f0891fc34faed365907425767d4a0bf0.jpg" alt=""></div>
+                    <div class="anchr"><a href=""><p>Tiffin</p></a> </div>   
+                 </div>
+            </div>
+
+        </div>
+<!-- Section5 -->
+        <div class="section5">
+           <div class="heading"> <h1>Top brands for you</h1></div>
+           <div class=" subsec5"> 
+            <div class="childsubsec5">
+                <div class="sec5img"><img src="https://b.zmtcdn.com/data/brand_creatives/logos/6a11fd0f30c9fd9ceaff2f5b21f61d23_1617187721.png?output-format=webp" alt=""></div>
+                <p>Burger King</p>
+                <p>32 min</p>
+            </div>
+            <div class="childsubsec5">
+                <div class="sec5img"><img src="https://b.zmtcdn.com/data/brand_creatives/logos/239f872f52291fe253a37cc8dd16188f_1663838300.png?output-format=webp" alt=""></div>
+                <p>Truffles</p>
+                <p>23 min</p>
+            </div>
+            <div class="childsubsec5">
+                <div class="sec5img" id="img5"><img src="https://b.zmtcdn.com/data/brand_creatives/logos/3d80cb89fca9e212f7dab2c1914ebd8f_1643983621.png?output-format=webp" alt=""></div>
+                <p>McDonald's</p>
+                <p>28 min</p>
+            </div>
+            <div class="childsubsec5">
+                <div class="sec5img"><img src="https://b.zmtcdn.com/data/brand_creatives/logos/5ef673b417cd25b5a04176ce341d425a_1630505477.png?output-format=webp" alt=""></div>
+                <p>A2B - Adyar <br> Ananda Bhavan</p>
+                <p>22 min</p>
+            </div>
+            <div class="childsubsec5">
+                <div class="sec5img"><img src="https://b.zmtcdn.com/data/brand_creatives/logos/ed9718e64b3307ae4aaee0bc81c1ea15_1625155163.png?output-format=webp" alt=""></div>
+                <p>Chaayos  <br>Chai+Snacks=Relax</p>
+                <p>23 min</p>
+            </div>
+            <div class="childsubsec5">
+                <div class="sec5img"><img src="https://b.zmtcdn.com/data/brand_creatives/logos/dc49d77dce0ee7fc8e495fa35be0e747_1648715086.png?output-format=webp" alt=""></div>
+                <p>FreshMenu</p>
+                <p>22 min</p>
+            </div>
+           </div> 
+        </div>
+<!-- section 6 -->
+<div class="section6">
+    <h1>Delivery Restaurants in Bengaluru</h1>
+
+</div>
+<!-- Section 7 -->
+        <div class="section7">
+            
+            <div class="subsec71">
+                
+                <div class="subsec72">
+                    <a href="">
+                    <img src="https://b.zmtcdn.com/data/pictures/chains/1/60551/60afc26a8d420799fc8bc7e27c968951_o2_featured_v2.jpg?output-format=webp" alt="">
+                   <div class="subsec721">
+                    <div class="restaurantname">
+                        <p>Leon's Burgers & Wings</p>
+                        <div class="rating"><h5>4.3⭐</h5></div>    
+                    </div>
+                    <div class="restaurantdesc">
+                        <p>Burger, Fast Food, Wraps</p>
+                        <p>₹200 for one</p>
+                    </div>
+                    <div class="time"><p>29min</p></div>
+                    <div class="line"></div>
+                    <div class="safety">
+                        <div class="img"> <img id="image" src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp" alt=""></div>
+                         <div class="para"><p >Follows all Max Safety measures to ensure  your food is safe</p></div>
+                     </div>
+                   </div>
+                </a>
+                </div>
+            
+            
+                <div class="subsec72">
+                    <a href="">
+                    <img src="https://b.zmtcdn.com/data/pictures/chains/1/50471/6fa39637442e85efb64a5c0db7b31b7f_o2_featured_v2.jpg?output-format=webp" alt="">
+                    <div class="subsec721">
+                        <div class="restaurantname">
+                            <p>Empire Restaurant</p>
+                            <div class="rating"><h5>4.3⭐</h5></div>    
+                        </div>
+                        <div class="restaurantdesc">
+                            <p>Burger, Fast Food, Wraps</p>
+                            <p>₹200 for one</p>
+                        </div>
+                        <div class="time"><p>29min</p></div>
+                        <div class="line"></div>
+                        <div class="safety">
+                            <div class="img"> <img id="image" src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp" alt=""></div>
+                             <div class="para"><p >Follows all Max Safety measures to ensure  your food is safe</p></div>
+                         </div>
+                    </div>
+                </a>
+                </div>
+            
+            
+                <div class="subsec72">
+                    <a href="">
+                    <img src="https://b.zmtcdn.com/data/pictures/chains/9/51139/5b7c92446f60085ca135c91cac8b5a54_o2_featured_v2.jpg" alt="">
+                    
+                        <div class="subsec721">
+                            <div class="restaurantname">
+                                <p>Biriyani Zone</p>
+                                <div class="rating"><h5>4.3⭐</h5></div>   
+                            </div>
+                            
+                            <div class="restaurantdesc">
+                                <p>Biryani, Andhra, North Indian</p>
+                                <p>₹350 for one</p>
+                            </div>
+                            <div class="time"><p>29min</p></div>
+                            <div class="line"></div>
+                            <div class="safety">
+                               <div class="img"> <img id="image" src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp" alt=""></div>
+                                <div class="para"><p >Follows all Max Safety measures to ensure  your food is safe</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            
+            <div class="subsec71">
+               
+                <div class="subsec72">
+                    <a href="">
+                    <img src="https://b.zmtcdn.com/data/pictures/9/19339139/f4224833a44735fa3c8b182c2a81f4a1_o2_featured_v2.jpg?output-format=webp" alt="">
+                   <div class="subsec721">
+                    <div class="restaurantname">
+                        <p>Maven Kitchen</p>
+                        <div class="rating"><h5>4.3⭐</h5></div>    
+                    </div>
+                    <div class="restaurantdesc">
+                        <p>Chinese, North Eastern</p>
+                        <p>₹100 for one</p>
+                    </div>
+                    <div class="time"><p>29min</p></div>
+                    <div class="line"></div>
+                    <div class="safety">
+                        <div class="img"> <img id="image" src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp" alt=""></div>
+                         <div class="para"><p >Follows all Max Safety measures to ensure  your food is safe</p></div>
+                     </div>
+                   </div>
+                </a>
+                </div>
+                
+            
+                <div class="subsec72">
+                    <a href="">
+                    <img src="https://b.zmtcdn.com/data/pictures/chains/9/19051939/631e94b5e92a24f8dc745a253a4caeeb_o2_featured_v2.jpg?output-format=webp" alt="">
+                    <div class="subsec721">
+                        <div class="restaurantname">
+                            <p>Andhra Gunpowder</p>
+                            <div class="rating"><h5>4.3⭐</h5></div>    
+                        </div>
+                        <div class="restaurantdesc">
+                            <p>Andhra, Biryani, South Indian</p>
+                            <p>₹100 for one</p>
+                        </div>
+                        <div class="time"><p>29min</p></div>
+                        <div class="line"></div>
+                        <div class="safety">
+                            <div class="img"> <img id="image" src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp" alt=""></div>
+                             <div class="para"><p >Follows all Max Safety measures to ensure  your food is safe</p></div>
+                         </div>
+                    </div>
+                 </a>
+                </div>
+            
+            
+                <div class="subsec72">
+                    <a href="">
+                    <img src="https://b.zmtcdn.com/data/pictures/chains/2/20801352/d9ca2f91b24d9bcd1058ffc849568cbf_o2_featured_v2.jpg" alt="">
+                    
+                        <div class="subsec721">
+                            <div class="restaurantname">
+                                <p>Paragon Restaurant</p>
+                                <div class="rating"><h5>4.3⭐</h5></div>   
+                            </div>
+                            
+                            <div class="restaurantdesc">
+                                <p>Burger, Fast Food, Wraps</p>
+                                <p>₹350 for one</p>
+                            </div>
+                            <div class="time"><p>29min</p></div>
+                            <div class="line"></div>
+                            <div class="safety">
+                               <div class="img"> <img id="image" src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp" alt=""></div>
+                                <div class="para"><p >Follows all Max Safety measures to ensure  your food is safe</p></div>
+                            </div>
+                        </div>
+                    </div>
+                 </a>
+                </div>
+            <div class="subsec71">
+                
+                <div class="subsec72">
+                    <a href="">
+                    <img src="https://b.zmtcdn.com/data/pictures/chains/0/50550/3028ae83d6b6a3450c0a93c83b20f949_o2_featured_v2.jpg" alt="">
+                   <div class="subsec721">
+                    <div class="restaurantname">
+                        <p>Kanti Sweets</p>
+                        <div class="rating"><h5>4.3⭐</h5></div>    
+                    </div>
+                    <div class="restaurantdesc">
+                        <p>Mithai, Desserts</p>
+                        <p>₹350 for one</p>
+                    </div>
+                    <div class="time"><p>29min</p></div>
+                    <div class="line"></div>
+                    <div class="safety">
+                        <div class="img"> <img id="image" src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp" alt=""></div>
+                         <div class="para"><p >Follows all Max Safety measures to ensure  your food is safe</p></div>
+                     </div>
+                   </div>
+                 </a>
+                </div>
+           
+            
+                <div class="subsec72">
+                    <a href="">
+                    <img src="https://b.zmtcdn.com/data/pictures/chains/3/53923/f1ed8209bf84106c577ebd774dd7194b_o2_featured_v2.jpg" alt="">
+                    <div class="subsec721">
+                        <div class="restaurantname">
+                            <p>Corner House Ice Creams</p>
+                            <div class="rating"><h5>4.3⭐</h5></div>    
+                        </div>
+                        <div class="restaurantdesc">
+                            <p>Ice Cream, Desserts, Shake</p>
+                            <p>₹100 for one</p>
+                        </div>
+                        <div class="time"><p>23min</p></div>
+                        <div class="line"></div>
+                        <div class="safety">
+                            <div class="img"> <img id="image" src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp" alt=""></div>
+                             <div class="para"><p >Follows all Max Safety measures to ensure  your food is safe</p></div>
+                         </div>
+                    </div>
+                </a>
+                </div>
+           
+                <div class="subsec72">
+                    <a href="">
+                    <img src="https://b.zmtcdn.com/data/pictures/chains/2/50812/21c544e626cbf40a91c8b236014b2682_o2_featured_v2.jpg" alt="">
+                    
+                        <div class="subsec721">
+                            <div class="restaurantname">
+                                <p>Polar Bear</p>
+                                <div class="rating"><h5>4.3⭐</h5></div>   
+                            </div>
+                            
+                            <div class="restaurantdesc">
+                                <p>Ice Cream, Desserts,Shakes</p>
+                                <p>₹350 for one</p>
+                            </div>
+                            <div class="time"><p>29min</p></div>
+                            <div class="line"></div>
+                            <div class="safety">
+                               <div class="img"> <img id="image" src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png?output-format=webp" alt=""></div>
+                                <div class="para"><p >Follows all Max Safety measures to ensure  your food is safe</p></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                </div>
+            
+            
+            </div>
+
+            
+            
+        </div>
+
+<!-- section 8 -->
+    <!-- <div class="section8line"></div> -->
+
+<!-- Section 9 -->
+    <div class="section9">
+        <div class="subsectioon9">
+            <p>Explore options near me</p>
+            <div class="subsectioon91"><p>Popular cuisines near me</p><p>^</p></div>
+            <div class="subsectioon91"><p>Popular restaurant types near me</p><p>^</p></div>
+            <div class="subsectioon91"><p>Top Restaurant Chains</p><p>^</p></div>
+            <div class="subsectioon91" ><p>Cities We Deliver To</p><p>^</p></div>
+        </div>
+    </div>
+<!-- section 10 footer -->
+<div class="footer">
+    <div class="section10">
+        <div class="footerheading">
+            <img src="https://b.zmtcdn.com/web_assets/b40b97e677bc7b2ca77c58c61db266fe1603954218.png?fit=around|198:42&crop=198:42;*,*" alt="">
+            <div class="dropdown">
+                <div class="dropdown1">
+                <select name="" id="">
+                    <option value="" id="ind"> <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS1OXGv3XelxdthD6Vzu5PIO6Ouf4ouqYsD4CrWI21DX35hUjv9" alt="">India</option>
+                    <option>UAE</option>
+                </select>
+            </div>
+                <div class="dropdown1">
+                <select name="" id="">
+                    <option value="">English</option>
+                    <option>Hindi</option>
+                </select>
+            </div>
+            </div>
+
+        </div>
+        <div class="subsection102">
+            <div class="subsection102links">
+                <h4>ABOUT</h4>
+                <a href=""><p>WHO WE ARE</p></a> <br>
+                <a href=""> <p>  Blog  </p></a> <br> 
+                <a href=""> <p>  Work With Us </p> </a> <br>
+                <a href=""> <p>  Investor Relations </p></a> <br>
+                <a href=""> <p>  Report Fraud </p></a> <br>
+                <a href=""> <p>  Press Kit</p></a> <br>
+                <a href=""> <p>  Contact Us</p></a>
+            </div>
+            <div class="subsection102links">
+                <h4>ZOMAVERSE</h4>
+                <a href=""> <p> Zomato </p></a> <br>
+                <a href=""> <p> Blinkit </p></a><br>
+                <a href=""> <p> Feeding India </p></a><br>
+                <a href=""> <p> Hyperpure </p></a><br>
+                <a href=""> <p> Zomaland </p></a>
+                
+            </div>
+            <div class="subsection102links">
+                <h4>FOR RESTAURANTS</h4>
+                <a href=""> <p> Partner With Us </p></a> <br>
+                <a href=""> <p> Apps For You </p></a>
+            </div>
+            <div class="subsection102links">
+                <h4>LEARN MORE</h4>
+                <a href=""> <p> Privacy </p></a> <br>
+                <a href=""> <p> Security</p></a><br>
+                <a href=""> <p> Terms </p></a><br>
+                <a href=""> <p> Sitemap </p></a>
+            </div>
+            <div class="subsection102links">
+                <h4>SOCIAL LINKS</h4>
+                <div class="sociallinksimgcombine">
+                    
+                        <div class="image">
+                            <a href="https://in.linkedin.com/company/zomato" target="_blank">
+                                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSOBQABmYa7K59NAXdhZ1Yil2th5RO09oC40LjDv3e_OPDOM13H" alt="">
+                            </a>
+                        </div>
+                        <div class="image">
+                            <a href="https://www.instagram.com/zomato/" target="_blank">
+                                <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTtAKO11l_pbbbyStDP6TpcL1AIbc52X6m0YvRVumQ4gE4RqTGv" alt="">
+                            </a>
+                        </div>
+                        <div class="image">
+                            <a href="https://twitter.com/zomato" target="_blank">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlLp1DYuRTFsYYJT7iMPs6tJ-13DtukLH_2dusDgvcPANk-UGZ" alt="">
+                            </a>
+                        </div>
+                        <div class="image">
+                            <a href="https://www.youtube.com/zomato" target="_blank" >
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROM9cmucO05M6mwbNBKGHGlDSsqcLQOmULdEiw3yRTC-pg7yg4"  alt="">
+                            </a>
+                        </div>
+                        <div class="image">
+                            <a href="https://www.facebook.com/zomato" target="_blank">
+                                <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRJJP8l-AmAskbdcHBDkt0M02tUl_HEJE44IwKYT7HQhIBaWQQO" alt="">
+                            </a>
+                        </div>  
+                </div>
+                <div class="image1">
+                    <a href="https://link.zomato.com/xqzv/downloadZomatoIos" target="_blank">
+                        <img src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png" alt="">
+                    </a>
+                </div>
+                <div class="image1">
+                    <a href="https://link.zomato.com/xqzv/downloadZomatoAndroid" target="_blank">
+                        <img src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="section10line"></div>
+        <p class="laststmt">By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All trademarks are properties of their respective owners. 2008-2024 © Zomato™ Ltd. All rights reserved.</p>
+    </div>
+</div>
+
+</div>
+</body>
+</html>
